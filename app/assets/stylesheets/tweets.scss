@@ -1,3 +1,44 @@
 // Place all the styles related to the Tweets controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+＊{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.index-header {
+  width: 100%;
+  height: 50px;
+  background-color: black;
+}
+
+.header-item {
+  width: 100%;
+  height: 50px;
+}
+
+.nav-list {
+ height: 100%;
+ display: flex;
+ margin-left: 1000px;
+}
+
+.fas {
+  color: white;
+  text-decoration: none;
+  margin: auto !important;
+  font-size: 20px;
+}
+
+.index {
+  text-align: center;
+}
+
+.post-index {
+  display:flex;
+  flex-wrap:wrap;
+  width: 90%;
+  margin: 0 auto;
+}

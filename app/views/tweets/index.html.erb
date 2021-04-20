@@ -1,31 +1,30 @@
-<p id="notice"><%= notice %></p>
+    <header class="index-header">
+      <nav class="header-item">
+        <div class="nav-list">
+          <ul class="nav-list-item">
+            <%= link_to '新規投稿', new_tweet_path,class:"fas fa-plus" %>
+          </ul>
+          <ul class="nav-list-item">
+            <%= link_to 'Home', root_path,class:"fas fa-home" %>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  <p id="notice"><%= notice %></p>
 
-<h1>Tweets</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Content</th>
-      <th>Image</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @tweets.each do |tweet| %>
-      <tr>
-        <td><%= tweet.title %></td>
-        <td><%= tweet.content %></td>
-        <td><%= attachment_image_tag tweet, :image %></td>
-        <td><%= link_to 'Show', tweet %></td>
-        <td><%= link_to 'Edit', edit_tweet_path(tweet) %></td>
-        <td><%= link_to 'Destroy', tweet, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  <main class="index">
+     <h1>Collection</h1>
+     <div class="post-index">
+      <% @tweets.each do |tweet| %>
+        <div class="index-item">
+          <%= link_to "/tweets/#{tweet.id}" do %>
+          <%= attachment_image_tag tweet, :image,:fill, 200, 200 %>
+          <% end %>
+        </div>
+      <% end %>
+     </div>
 
-<br>
-
-<%= link_to 'New Tweet', new_tweet_path %>
+  </div>
+</body>
