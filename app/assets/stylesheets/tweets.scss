@@ -34,11 +34,56 @@
 
 .index {
   text-align: center;
+  height:1000px;
+}
+
+.index-title {
+  margin: 0 auto;
 }
 
 .post-index {
   display:flex;
   flex-wrap:wrap;
-  width: 90%;
+  width: 1200px;
   margin: 0 auto;
+  background-color: rgba(225, 225, 225, 0.7);
+  text-align: centers;
+  padding: 20px;
+}
+
+.show-main {
+  text-align: center;
+  margin-top: auto;
+}
+
+.tweet-body {
+  background-image: image-url("andy-wang-cRiUOdL0pkI-unsplash.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.show-content {
+  margin: 0 auto;
+  width: 600px;
+  background-color: rgba(225, 225, 225, 0.7);
+}
+
+.show-tweet-title {
+  font-size: 50px;
+  margin-bottom: 0;
+}
+
+.show-tweet-body {
+  width: 500px;
+  height: 300px;
+  border: 2px solid black;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+
+
+.show-item {
+  text-decoration: none;
+  color: black;
 }

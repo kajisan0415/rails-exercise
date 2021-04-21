@@ -1,21 +1,19 @@
-    <header class="index-header">
-      <nav class="header-item">
-        <div class="nav-list">
-          <ul class="nav-list-item">
-            <%= link_to '新規投稿', new_tweet_path,class:"fas fa-plus" %>
-          </ul>
-          <ul class="nav-list-item">
-            <%= link_to 'Home', root_path,class:"fas fa-home" %>
-          </ul>
-        </div>
-      </nav>
-    </header>
-  <p id="notice"><%= notice %></p>
-
-
-
+<body class="tweet-body">
+  <header class="index-header">
+    <nav class="header-item">
+      <div class="nav-list">
+        <ul class="nav-list-item">
+          <%= link_to '新規投稿', new_tweet_path,class:"fas fa-plus" %>
+        </ul>
+        <ul class="nav-list-item">
+          <%= link_to 'Home', root_path,class:"fas fa-home" %>
+        </ul>
+      </div>
+    </nav>
+  </header>
   <main class="index">
-     <h1>Collection</h1>
+    <p id="notice"><%= notice %></p>
+     <h1 class="index-title">投稿一覧</h1>
      <div class="post-index">
       <% @tweets.each do |tweet| %>
         <div class="index-item">
@@ -25,6 +23,6 @@
         </div>
       <% end %>
      </div>
-
-  </div>
+  </main>
+  <footer></footer>
 </body>
