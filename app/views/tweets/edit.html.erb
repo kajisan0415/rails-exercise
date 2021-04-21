@@ -1,6 +1,63 @@
-<h1>Editing Tweet</h1>
+<body class="tweet-body">
+  <header class="index-header">
+    <nav class="header-item">
+      <div class="nav-list">
+        <ul class="nav-list-item">
+          <%= link_to '新規投稿', new_tweet_path,class:"fas fa-plus" %>
+        </ul>
+        <ul class="nav-list-item">
+          <%= link_to 'Home', root_path,class:"fas fa-home" %>
+        </ul>
+        <ul class="nav-list-item">
+          <%= link_to '投稿一覧', tweets_path,class:"fas fa-book" %>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="form-body">
+    <div class="form-container">
+      <h1 class="form-title">編集</h1>
+      <%= form_with(model: @tweet, local: true) do |form| %>
+        <% if @tweet.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@tweet.errors.count, "error") %> prohibited this tweet from being saved:</h2>
 
-<%= render 'form', tweet: @tweet %>
+            <ul>
+            <% @tweet.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+            </ul>
+          </div>
+        <% end %>
 
-<%= link_to 'Show', @tweet %> |
-<%= link_to 'Back', tweets_path %>
+        <div class="field">
+          <%= form.label :title,"名前" %>
+          <%= form.text_field :title %>
+        </div>
+
+        <div class="field">
+          <%= form.label :content,"内容" %>
+          <%= form.text_area :content %>
+        </div>
+
+        <div class="field">
+          <%= form.label :image,"画像" %>
+          <%= form.attachment_field :image %>
+        </div>
+        <%= attachment_image_tag @tweet, :image,:fill, 300, 300, fallback: "no_image.jpg"  %>
+
+        <div class="actions">
+          <%= form.submit '更新' %>
+        </div>
+      <% end %>
+
+      <div class="bottom-action">
+        <%= link_to 'Show', @tweet %> |
+        <%= link_to 'Back', tweets_path %>
+      </div>
+
+    </div>
+  </main>
+  <footer></footer>
+</body>
+
