@@ -10,7 +10,7 @@
 
 .index-header {
   width: 100%;
-  height: 50px;
+  height: 60px;
   background-color: black;
 }
 
@@ -30,15 +30,19 @@
   text-decoration: none;
   margin: auto !important;
   font-size: 20px;
+  font-family: "HiraMinProN-W6";
 }
 
 .index {
   text-align: center;
   height:1000px;
+  margin-top: 50px;
 }
 
 .index-title {
   margin: 0 auto;
+  font-family: "HiraMinProN-W6";
+  margin-bottom: 20px;
 }
 
 .post-index {
@@ -71,6 +75,7 @@
 .show-tweet-title {
   font-size: 50px;
   margin-bottom: 0;
+  font-family: "HiraMinProN-W6";
 }
 
 .show-tweet-body {
@@ -81,7 +86,7 @@
   margin: 0 auto;
   margin-top: 20px;
   margin-bottom: 20px;
-  font-size: 30px;
+  font-size: 20px;
 }
 
 
@@ -92,21 +97,24 @@
 
 .form-title {
   padding-top: 20px;
+  font-family: "HiraMinProN-W6";
 }
 
 .form-body {
   width: 100%;
   height: 700px;
+  font-family: "HiraMinProN-W6";
 }
 
 .form-container {
   text-align: center;
   margin: 0 auto;
-  width: 500px;
+  width: 700px;
   height: auto;
   background-color: rgba(225, 225, 225, 0.7);
   margin-top: 50px;
   margin-bottom: 50px;
+  font-family: "HiraMinProN-W6";
 }
 
 .field {
@@ -120,4 +128,23 @@
 .bottom-action {
   margin-top: 30px;
   padding-bottom: 20px;
+  font-family: "HiraMinProN-W6";
+}
+
+.form-tweet-title {
+  width: 200px;
+  height: 30px;
+  background-color: rgb(221, 216, 216);
+}
+
+.form-tweet-body {
+  width: 400px;
+  height: 100px;
+  background-color: rgb(221, 216, 216);
+}
+
+.submit-button {
+  width: 150px;
+  height: 30px;
+  font-family: "HiraMinProN-W6";
 }

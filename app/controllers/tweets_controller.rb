@@ -3,7 +3,7 @@ class TweetsController < ApplicationController
 
   # GET /tweets or /tweets.json
   def index
-    @tweets = Tweet.all
+    @tweets = Tweet.page(params[:page]).reverse_order
   end
 
   # GET /tweets/1 or /tweets/1.json
@@ -51,7 +51,7 @@ class TweetsController < ApplicationController
   def destroy
     @tweet.destroy
     respond_to do |format|
-      format.html { redirect_to tweets_url, notice: "投稿を削除しました。" }
+      format.html { redirect_to tweets_url, notice: "投稿を削除しました." }
       format.json { head :no_content }
     end
   end

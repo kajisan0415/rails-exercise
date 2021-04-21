@@ -3,10 +3,10 @@
     <nav class="header-item">
       <div class="nav-list">
         <ul class="nav-list-item">
-          <%= link_to '新規投稿', new_tweet_path,class:"fas fa-plus" %>
+          <%= link_to 'Home', root_path,class:"fas" %>
         </ul>
         <ul class="nav-list-item">
-          <%= link_to 'Home', root_path,class:"fas fa-home" %>
+          <%= link_to '新規投稿', new_tweet_path,class:"fas" %>
         </ul>
       </div>
     </nav>
@@ -23,6 +23,7 @@
         </div>
       <% end %>
      </div>
+     <%= paginate @tweets %>
   </main>
   <footer></footer>
 </body>

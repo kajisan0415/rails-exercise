@@ -3,13 +3,13 @@
     <nav class="header-item">
       <div class="nav-list">
         <ul class="nav-list-item">
-          <%= link_to '新規投稿', new_tweet_path,class:"fas fa-plus" %>
+          <%= link_to 'Home', root_path,class:"fas" %>
         </ul>
         <ul class="nav-list-item">
-          <%= link_to 'Home', root_path,class:"fas fa-home" %>
+          <%= link_to '新規投稿', new_tweet_path,class:"fas" %>
         </ul>
         <ul class="nav-list-item">
-          <%= link_to '投稿一覧', tweets_path,class:"fas fa-book" %>
+          <%= link_to '投稿一覧', tweets_path,class:"fas" %>
         </ul>
       </div>
     </nav>
@@ -18,17 +18,19 @@
     <p id="notice"><%= notice %></p>
     <div class="show-content">
       <p class="show-tweet-title">
-      <%= @tweet.title %>
-    </p>
-    <div class="show-tweet-image">
-      <%= attachment_image_tag @tweet, :image,:fill, 500, 500, fallback: "no_image.jpg"  %>
-    </div>
-    <p class="show-tweet-body">
-      <%= @tweet.content %>
-    </p>
-    <%= link_to '編集', edit_tweet_path(@tweet),class:"show-item" %> |
-    <%= link_to '戻る', tweets_path,class:"show-item" %> |
-    <%= link_to '削除', @tweet, method: :delete, data: { confirm: 'Are you sure?' },class:"show-item" %>
+        <%= @tweet.title %>
+      </p>
+      <div class="show-tweet-image">
+        <%= attachment_image_tag @tweet, :image,:fill, 500, 500, fallback: "no_image.jpg"  %>
+      </div>
+      <p class="show-tweet-body">
+        <%= @tweet.content %>
+      </p>
+      <div class="bottom-action">
+        <%= link_to '編集', edit_tweet_path(@tweet),class:"show-item" %> |
+        <%= link_to '一覧', tweets_path,class:"show-item" %> |
+        <%= link_to '削除', @tweet, method: :delete, data: { confirm: 'Are you sure?' },class:"show-item" %>
+      </div>
     </div>
   </main>
   <footer></footer>

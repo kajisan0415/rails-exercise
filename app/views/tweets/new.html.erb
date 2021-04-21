@@ -3,13 +3,13 @@
     <nav class="header-item">
       <div class="nav-list">
         <ul class="nav-list-item">
-          <%= link_to '新規投稿', new_tweet_path,class:"fas fa-plus" %>
+          <%= link_to 'Home', root_path,class:"fas" %>
         </ul>
         <ul class="nav-list-item">
-          <%= link_to 'Home', root_path,class:"fas fa-home" %>
+          <%= link_to '新規投稿', new_tweet_path,class:"fas" %>
         </ul>
         <ul class="nav-list-item">
-          <%= link_to '投稿一覧', tweets_path,class:"fas fa-book" %>
+          <%= link_to '投稿一覧', tweets_path,class:"fas" %>
         </ul>
       </div>
     </nav>
@@ -31,12 +31,12 @@
 
         <div class="field">
           <%= form.label :title,"名前" %>
-          <%= form.text_field :title %>
+          <%= form.text_field :title,class:"form-tweet-title" %>
         </div>
 
         <div class="field">
           <%= form.label :content,"内容" %>
-          <%= form.text_area :content %>
+          <%= form.text_area :content,class:"form-tweet-body" %>
         </div>
 
         <div class="field">
@@ -45,14 +45,14 @@
         </div>
 
         <div class="actions">
-          <%= form.submit '投稿' %>
+          <%= form.submit '投稿',class:"submit-button" %>
         </div>
       <% end %>
-      
+
       <div class="bottom-action">
-         <%= link_to 'Back', tweets_path %>
+         <%= link_to '戻る', tweets_path,class:"show-item"  %>
       </div>
-   
+
     </div>
   </main>
   <footer></footer>
